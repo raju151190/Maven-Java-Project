@@ -1,4 +1,4 @@
-def hello = "Welcome to RNS"
+def hello = "Welcome to Kiran Nagaraj"
 pipeline {
    agent none
    
