@@ -5,7 +5,7 @@ pipeline {
    stages {
       stage('Hello') {
           agent{
-              label 'Java'
+              label 'slave'
           }
          steps {
             echo "Hello, ${hello} "
