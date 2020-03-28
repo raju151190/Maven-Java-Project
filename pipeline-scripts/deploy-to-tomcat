@@ -15,14 +15,14 @@ pipeline {
           }
          steps {
             // Get src code from a GitHub repository
-            git credentialsId: 'Github_un_pwd', url: 'https://github.com/venkat09docs/Maven-Java-Project.git'
+            git credentialsId: 'slave_git', url: 'https://github.com/raju151190/Maven-Java-Project.git'
             
             script{
                 mvnHome = tool name: 'maven3', type: 'maven'
             }      
          }         
       }
-      stage('Build'){
+      <!-- stage('Build'){
           agent {
               label 'Slave'
           }
@@ -53,6 +53,6 @@ pipeline {
          sshPut remote: remote, from: 'target/webapp.war', into: '/home/centos/tomcta8/webapps/'
          sshCommand remote: remote, command: 'sh /home/centos/tomcta8/bin/startup.sh'
       }
-   }
+   } -->
    }
 }
