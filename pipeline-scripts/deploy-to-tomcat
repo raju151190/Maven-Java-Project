@@ -16,7 +16,7 @@ pipeline {
          steps {
             // Get src code from a GitHub repository
             git credentialsId: 'slave_git', url: 'https://github.com/raju151190/Maven-Java-Project.git'
-            
+                       
             script{
                 mvnHome = tool name: 'maven3', type: 'maven'
             }      
