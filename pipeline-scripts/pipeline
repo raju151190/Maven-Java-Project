@@ -18,7 +18,7 @@ pipeline {
    stages {
       stage('Prepare Workspace') {
          agent {
-              label 'build_server'
+              label 'slave'
           }
          steps {
             // Get src code from a GitHub repository
